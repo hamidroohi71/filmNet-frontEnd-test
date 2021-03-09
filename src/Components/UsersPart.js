@@ -1,36 +1,29 @@
 import React, { useState, useEffect } from "react";
 import UserTable from "./userTable";
+import Fuse from "fuse.js";
 
 //Defining the context to have the userList anywhere in the project
-export const UserContext = React.createContext([]);
+export const UserContext = React.createContext([
+    
+]);
+
+//fuse search config
 
 //This function render the whole user part and it's options in the main page.
-export default function UserPart() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
+export default function UserPart(props) {
+  const [items, setItems] = useState(props.data);
+  const dataList = props.data;
 
-  useEffect(() => {
-    //Requesting the api to recieve the users data
-    fetch("https://reqres.in/api/users?page=1")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setItems(result.data);
-        },
-        (error) => {
-          setIsLoaded(isLoaded);
-          setError(error);
-        }
-      );
-  });
+  function searchUsers(phrase) {
+    const options = {
+      keys: ["first_name", "last_name"],
+    };
+    const fuse = new Fuse(dataList, options);
+    const result = fuse.search(phrase);
+    setItems(result);
+  }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div>Loading...</div>;
-  } else {
+  {
     return (
       <UserContext.Provider value={items}>
         <UserTable />
