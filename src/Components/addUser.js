@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import {UserContext} from "./UsersPart";
+import "./styles/addUser.css";
 
 export default function AddUser () {
     const users = useContext(UserContext);
@@ -19,22 +20,28 @@ export default function AddUser () {
             avatar : './'
         }
         users.userAdd(newUser);
+        debugger;
     }
     
     return(
-        <div>
+        <div className="AddUser">
             <button onClick={() => {modal ? setModal(false) : setModal(true)}}>Add New User</button>
-            <div id="AddUserModal" className="AddUserModal" style={{display: modal ? 'block' : 'none'}}>
-                <form onSubmit={submitForm}>
-                    <label for="fname">First Name</label>
-                    <input type="text" name="fname" onChange={(e) => {setFname(e.target.value)}}></input>
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="lname" onChange={(e) => {setLname(e.target.value)}}></input>
-                    <label for="mail">E-mail</label>
-                    <input type="text" name="mail" onChange={(e) => {setMail(e.target.value)}}></input>
-                    <input type="submit" value="save"></input>
-                    <button onClick={()=> {modal ? setModal(false) : setModal(true)}}>cancel</button>
-                </form>
+            <div id="AddUserModal" className="AddUserModal" style={{display: modal ? 'flex' : 'none'}}>
+                <div>
+                    <form onSubmit={submitForm}>
+                        <label>First Name</label>
+                        <input type="text" name="fname" onChange={(e) => {setFname(e.target.value)}}></input>
+                        <label>Last Name</label>
+                        <input type="text" name="lname" onChange={(e) => {setLname(e.target.value)}}></input>
+                        <label>E-mail</label>
+                        <input type="text" name="mail" onChange={(e) => {setMail(e.target.value)}}></input>
+                        <div className="BtnContainer">
+                            <input type="submit" value="save"></input>
+                            <input type="reset" onClick={(e)=> {modal ? setModal(false) : setModal(true)}} value="cancel"/>
+                        </div>
+                    </form>
+                </div>
+                
 
             </div>
         </div>

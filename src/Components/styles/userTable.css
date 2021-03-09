@@ -1,0 +1,95 @@
+.UserTable {
+    width: 100%;
+}
+.UserTable td{
+    text-align: center;
+    padding: 2vh 0;
+    
+}
+.UserTable th {
+    padding: 1vh 0;
+}
+.UserTable img {
+    width: 5vw;
+    height: 5vw;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.Options > button {
+    margin: 5px;
+    border: none;
+    background-color: #0b3b5c;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Options > button :focus {
+    outline: none;
+}
+
+.EditUserModal {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+}
+
+.EditUserModal::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0b3b5c;
+    opacity: 0.6;
+}
+.EditUserModal  > div{
+    width: 13vw;
+    height: fit-content;
+    margin: auto;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 5;
+    padding: 2vw;
+    border-radius: 20px;
+}
+
+.EditUserModal  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.EditUserModal label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.EditUserModal input {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.BtnContainer{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.BtnContainer input {
+    background-color: #0b3b5c;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;  
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer; 
+}

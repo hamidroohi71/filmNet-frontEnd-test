@@ -1,0 +1,81 @@
+.AddUser {
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    background: #887212;
+    display: flex;
+}
+.AddUser > button {
+    height: 2.5vh;
+    background: #0b3b5c;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: auto;
+    cursor: pointer;
+}
+.AddUserModal {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: transparent;
+    height: 100vh;
+    display: flex;
+}
+.AddUserModal::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0b3b5c;
+    opacity: 0.6;
+}
+.AddUserModal  > div{
+    width: 13vw;
+    height: fit-content;
+    margin: auto;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 5;
+    padding: 2vw;
+    border-radius: 20px;
+}
+
+.AddUserModal  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.AddUserModal label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.AddUserModal input {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.AddUserModal{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.AddUserModal input {
+    background-color: #0b3b5c;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;  
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer; 
+}
+

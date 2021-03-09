@@ -21,13 +21,23 @@ function App() {
           setError(error);
         }
       );
-  },[]);
-  
+  }, []);
+
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
-  } else return <UserPart data={items} />;
+    return <div class="Loading">Loading...</div>;
+  } else
+    return (
+      <div className="PageContainer">
+        <h1 className="Title">FilmNet Front End Developing Test</h1>
+        <UserPart data={items} />
+        <footer>
+          <h2>Created by Hamid Roohi</h2>
+          <h3>Phone: +98-910-778-5026</h3>
+        </footer>
+      </div>
+    );
 }
 
 export default App;

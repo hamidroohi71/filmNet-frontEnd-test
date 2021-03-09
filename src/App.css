@@ -1,0 +1,32 @@
+.PageContainer {
+  width: 100%;
+
+}
+
+.Title {
+    height: 10vh;
+    text-align: center;
+    color: #fff;
+    background-color: #0b3b5c;
+    line-height: 10vh;
+    margin: 0;
+}
+
+footer {
+    height: 20vh;
+    background-color: #0b3b5c;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > h2 {
+    font-size: 16px;
+}
+
+footer > h3 {
+    font-size: 14px;
+}
