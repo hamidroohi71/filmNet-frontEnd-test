@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState , useEffect} from 'react';
+import UserTable from './Components/userTable';
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+   return(
+     <UserTable />
+   )
+  
 }
 
 export default App;

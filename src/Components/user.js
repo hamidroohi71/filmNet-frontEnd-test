@@ -1,20 +1,21 @@
 import React from 'react';
 
 export default function User(props) {
+    let user = props.user;
     return (
         <>
         <tr>
             <td>
-                <img src={props.image} />
+                <img src={user.avatar} />
             </td>
             <td>
-                {props.fname}
+                {user.first_name}
             </td>
             <td>
-                {props.lname}
+                {user.last_name}
             </td>
             <td>
-                {props.mail}
+                {user.email}
             </td>
             <td>
                 <button>Edit</button>
