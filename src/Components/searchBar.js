@@ -8,7 +8,7 @@ export default function SearchBar() {
     return(
         <div className="SearchBar">
             <form>
-                <input id="SearchBar" onChange={(e) => {users.userSearch(e.target.value)}} type="text"></input>
+                <input id="SearchBar" placeholder="Search the user ..." onChange={(e) => {users.userSearch(e.target.value)}} type="text"></input>
             </form>
         </div>
     )

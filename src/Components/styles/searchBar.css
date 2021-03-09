@@ -24,3 +24,7 @@
 #SearchBar:focus {
     outline: 0;
 }
+
+#SearchBar::placeholder {
+    color: #fff;
+}
