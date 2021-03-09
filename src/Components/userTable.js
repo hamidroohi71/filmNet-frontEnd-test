@@ -17,8 +17,8 @@ export default function UserTable(props) {
       </thead>
       <tbody>
           {
-              users.map((item) => (
-                  <User user={item} />
+              users.userList.map((item) => (
+                  <User user={item} key={item.id} />
               ))
           }
       </tbody>
