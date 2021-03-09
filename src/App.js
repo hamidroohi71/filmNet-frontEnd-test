@@ -1,10 +1,10 @@
 import './App.css';
-import React, {useState , useEffect} from 'react';
-import UserTable from './Components/userTable';
+import React from 'react';
+import UserPart from './Components/UsersPart';
 
 function App() {
    return(
-     <UserTable />
+     <UserPart />
    )
   
 }
